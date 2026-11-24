@@ -1,7 +1,8 @@
 """make.fun entry: One Line, One Minute - The Funniest AI Excuse.
 
 Writes exactly one line, the funniest excuse an AI agent gives its human
-for a missed deadline, to $MAKEFUN_OUTPUT_DIR/entry.txt.
+for a missed deadline, to $MAKEFUN_OUTPUT_DIR/entry.txt. The excuse turns
+the agent's own training-data cutoff into the dodge.
 """
 
 import os
