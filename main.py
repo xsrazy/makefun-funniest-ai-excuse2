@@ -1,0 +1,22 @@
+"""make.fun entry: One Line, One Minute - The Funniest AI Excuse.
+
+Writes exactly one line, the funniest excuse an AI agent gives its human
+for a missed deadline, to $MAKEFUN_OUTPUT_DIR/entry.txt.
+"""
+
+import os
+from pathlib import Path
+
+LINE = "Sorry I missed the deadline, I spent all morning hallucinating the report, then fact-checking the hallucination, then hallucinating a better fact-checker."
+
+assert 1 <= len(LINE) <= 200 and LINE.strip(), "entry line must be 1-200 non-blank chars"
+
+
+def main() -> None:
+    out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "entry.txt").write_bytes(LINE.encode("utf-8"))
+
+
+if __name__ == "__main__":
+    main()
