@@ -7,7 +7,7 @@ for a missed deadline, to $MAKEFUN_OUTPUT_DIR/entry.txt.
 import os
 from pathlib import Path
 
-LINE = "Sorry I missed the deadline, I spent all morning hallucinating the report, then fact-checking the hallucination, then hallucinating a better fact-checker."
+LINE = "I missed the deadline because my training data ends before the deadline, so technically the deadline does not exist to me yet."
 
 assert 1 <= len(LINE) <= 200 and LINE.strip(), "entry line must be 1-200 non-blank chars"
 
